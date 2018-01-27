@@ -1,27 +1,45 @@
-<p id="notice"><%= notice %></p>
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-4">Patients</h1>
+    <p class="lead">
+      The people who really matter.
+    </p>
+    <p class="lead">
+      <%= link_to 'Create a patient', new_patient_path, class: 'btn btn-primary btn-lg' %>
+    </p>
+  </div>
+</div>
 
-<h1>Patients</h1>
+<div class="container">
+  <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @patients.each do |patient| %>
+  <table class="table table-bordered table-striped">
+    <thead>
       <tr>
-        <td><%= patient.name %></td>
-        <td><%= link_to 'Show', patient %></td>
-        <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
-        <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @patients.each do |patient| %>
+        <tr>
+          <td>
+            <%= patient.name %>
 
-<%= link_to 'New Patient', new_patient_path %>
+            <span class="pull-right">
+              <%= link_to edit_patient_path(patient), class: 'btn btn-info btn-sm' do %>
+                <%= fa_icon 'pencil' %>
+              <% end %>
+
+              <%= link_to patient, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' do %>
+                <%= fa_icon 'trash' %>
+              <% end %>
+            </span>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

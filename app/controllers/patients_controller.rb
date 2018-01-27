@@ -7,11 +7,6 @@ class PatientsController < ApplicationController
     @patients = Patient.all
   end
 
-  # GET /patients/1
-  # GET /patients/1.json
-  def show
-  end
-
   # GET /patients/new
   def new
     @patient = Patient.new
@@ -28,7 +23,7 @@ class PatientsController < ApplicationController
 
     respond_to do |format|
       if @patient.save
-        format.html { redirect_to @patient, notice: 'Patient was successfully created.' }
+        format.html { redirect_to patients_path, notice: 'Patient was successfully created.' }
         format.json { render :show, status: :created, location: @patient }
       else
         format.html { render :new }
@@ -56,7 +51,7 @@ class PatientsController < ApplicationController
   def destroy
     @patient.destroy
     respond_to do |format|
-      format.html { redirect_to patients_url, notice: 'Patient was successfully destroyed.' }
+      format.html { redirect_to patients_url, notice: 'Patient was successfully removed.' }
       format.json { head :no_content }
     end
   end

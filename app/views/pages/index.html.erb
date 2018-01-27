@@ -1,3 +1,9 @@
-<h1>Welcome to Medtracker</h1>
-
-<p>The time is <%= Time.now.to_s %></p>
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-4">Medtracker</h1>
+    <p class="lead">Track medicine schedules with ease.</p>
+    <p class="lead">
+      <%= link_to 'Create a patient', new_patient_path, class: 'btn btn-primary btn-lg' %>
+    </p>
+  </div>
+</div>
