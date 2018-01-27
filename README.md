@@ -2,6 +2,11 @@
 
 First, you need to install PostgreSQL. You can install it [here](https://postgresapp.com/).
 
+Next, you should clone the repo:
+
+    $ git clone https://github.com/edubelbeiss/medtracker
+    $ cd medtracker
+
 Then, you'll need to install some gems:
 
     $ gem install bunder
