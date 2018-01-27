@@ -8,6 +8,7 @@ Then, you'll need to install some gems:
     $ bundle install
 
 Then, you'll need to setup the database:
+
     $ bin/rake db:setup
     
 Now, you're ready to start the server:
