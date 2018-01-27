@@ -1,24 +1,15 @@
-# README
+# Medtracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+First, you need to install PostgreSQL. You can install it [here](https://postgresapp.com/).
 
-Things you may want to cover:
+Then, you'll need to install some gems:
 
-* Ruby version
+    $ gem install bunder
+    $ bundle install
 
-* System dependencies
+Then, you'll need to setup the database:
+    $ bin/rake db:setup
+    
+Now, you're ready to start the server:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    $ bin/rails server
