@@ -9,7 +9,7 @@ Next, you should clone the repo:
 
 Then, you'll need to install some gems:
 
-    $ gem install bunder
+    $ gem install bundler
     $ bundle install
 
 Then, you'll need to setup the database:
