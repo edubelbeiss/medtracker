@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  resources :patients, except: [:show]
+  resources :patients
   root to: 'pages#index'
 end

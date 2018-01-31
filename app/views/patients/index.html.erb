@@ -26,7 +26,7 @@
       <% @patients.each do |patient| %>
         <tr>
           <td>
-            <%= patient.name %>
+            <%= link_to patient.name, patient_path(patient) %>
 
             <span class="pull-right">
               <%= link_to edit_patient_path(patient), class: 'btn btn-info btn-sm' do %>
