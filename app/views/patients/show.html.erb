@@ -1,1 +1,11 @@
-<%= @patient.name %>
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-4"><%= @patient.name %></h1>
+    <p class="lead">
+      Oh no! We hope <%= @patient.name %> isn't sick.
+    </p>
+    <p class="lead">
+      <%= link_to 'Add medication', '#', class: 'btn btn-primary btn-lg' %>
+    </p>
+  </div>
+</div>
